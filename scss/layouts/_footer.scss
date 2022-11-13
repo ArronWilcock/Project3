@@ -1,0 +1,62 @@
+.footer {
+    padding: 25px;
+    @include flexBox(column);
+    background-color: $grey-color;
+
+    @include desktop {
+        padding: 25px 200px;
+    }
+
+    &__logo {
+        font-size: 18px;
+        font-family: $logo-title-font;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: weight(regular);
+
+        @include desktop {
+            align-self: center;
+            font-size: 24px
+        }
+
+        @include tablet {
+            align-self: center;
+            font-size: 24px;
+        }
+
+    }
+
+    &__list {
+        @include flexBox(column);
+        gap: 10px;
+        list-style-type: none;
+        text-decoration: none;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+    }
+
+    &__list-item a {
+        color: #fff;
+
+        &:hover {
+            color: $secondary-color;
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+
+}

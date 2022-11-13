@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    @include flexBox(row);
+    justify-content: center;
+    padding: 0 20px;
+
+    &__logo--menu {
+        margin: 20px 0 15px;
+        width: 160px;
+    }
+
+    &__a--menu {
+        position: absolute;
+        align-self: center;
+        left: 20px;
+        background-color: #fff;
+        border: none;
+        color: $grey-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__icon--menu {
+        font-size: 18px;
+    }
+}

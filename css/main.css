@@ -55,7 +55,7 @@ a {
     padding: 25px 200px;
   }
 }
-.footer__h2 {
+.footer__logo {
   font-size: 18px;
   font-family: "Shrikhand", cursive;
   margin-bottom: 20px;
@@ -63,18 +63,18 @@ a {
   font-weight: 500;
 }
 @media (min-width: 992px) {
-  .footer__h2 {
+  .footer__logo {
     align-self: center;
     font-size: 24px;
   }
 }
 @media (max-width: 992px) and (min-width: 768px) {
-  .footer__h2 {
+  .footer__logo {
     align-self: center;
     font-size: 24px;
   }
 }
-.footer__ul {
+.footer__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -82,21 +82,21 @@ a {
   text-decoration: none;
 }
 @media (max-width: 992px) and (min-width: 768px) {
-  .footer__ul {
+  .footer__list {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 992px) {
-  .footer__ul {
+  .footer__list {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.footer__li a {
+.footer__list-item a {
   color: #fff;
 }
-.footer__li a:hover {
+.footer__list-item a:hover {
   color: #FF79DA;
   cursor: pointer;
 }
