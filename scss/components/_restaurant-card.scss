@@ -1,0 +1,61 @@
+.restaurant-card {
+    position: relative;
+    height:245px;
+    width: 335px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 15px;
+
+    &__new{
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, 35%);
+        font-size: 15px;
+        font-weight: weight(bold);
+        padding: 6px 25px;
+        border-radius: 2px;
+
+
+    }
+
+    &__textbox{
+        @include flexBox(column);
+        position: relative;
+        padding: 10px 12px;
+        height: 75px;
+        gap: 5px;
+        
+
+    }
+
+    &__title{
+        font-weight: weight(thick);
+        font-size: 18px;
+
+    }
+
+    &__text{
+        font-size: 17px;
+
+    }
+
+    &__icon{
+        position: absolute;
+        right: 20px;
+        top: 30px;
+
+    }
+
+    &__image {
+        height: 170px;
+        width: 335px;
+        object-fit: cover;
+        object-position: 100% 100%;
+
+        &--position{
+            object-position: 100% 62%;
+        }
+    }
+}

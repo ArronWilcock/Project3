@@ -1,45 +1,18 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$grey-color: #343638;
+$dark-accent: #343638;
+$light-accent: #E7E5E5;
+$lightest-accent:#f2f2f2;
 $logo-title-font: 'Shrikhand', cursive;
 $text-font: 'Roboto', sans-serif;
 $font-weights: (
     "thin": 400,
     "regular": 500,
-    "bold": 700
+    "bold": 700,
+    "thick": 900
 );
 
 $mobile: 768px;
 $tablet: 992px;
 $desktop: 992px;
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (max-width: $tablet) and (min-width: $mobile) {
-        @content;
-    }
-
-}
-
-@mixin desktop {
-    @media (min-width: $desktop) {
-        @content;
-    }
-
-
-}
-@mixin flexBox($direction) {
-    display: flex;
-    flex-direction: $direction;
-
-}
-
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name)
-}

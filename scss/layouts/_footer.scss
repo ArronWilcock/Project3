@@ -1,7 +1,7 @@
 .footer {
     padding: 25px;
     @include flexBox(column);
-    background-color: $grey-color;
+    background-color: $dark-accent;
 
     @include desktop {
         padding: 25px 200px;

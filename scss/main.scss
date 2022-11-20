@@ -1,7 +1,14 @@
-@import './base/boxsizing';
 @import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+
+@import './base/boxsizing';
+@import './base/normalize';
+
+@import './components/btn';
+@import './components/restaurant-card';
+
 @import './layouts/header';
 @import './layouts/footer';
 
-
-
+@import './pages/home';
