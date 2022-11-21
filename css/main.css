@@ -398,7 +398,7 @@ template {
   margin: 20px 0 15px;
   width: 160px;
 }
-.menu-header__back {
+.menu-header__btn {
   position: absolute;
   align-self: center;
   left: 20px;
@@ -406,7 +406,7 @@ template {
   border: none;
   color: #343638;
 }
-.menu-header__back:hover {
+.menu-header__btn:hover {
   cursor: pointer;
 }
 .menu-header__icon {
@@ -454,7 +454,6 @@ template {
 }
 @media (min-width: 992px) {
   .footer__logo {
-    align-self: center;
     font-size: 24px;
   }
 }
@@ -494,6 +493,11 @@ template {
   margin-right: 5px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .location {
   display: flex;
   flex-direction: row;
@@ -504,6 +508,20 @@ template {
   padding: 15px 0;
   font-weight: 700;
   box-shadow: inset 0 5px 5px -5px black;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .location {
+    width: 375px;
+    align-self: center;
+    border-radius: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .location {
+    width: 375px;
+    align-self: center;
+    border-radius: 25px;
+  }
 }
 .location__icon {
   margin-right: 15px;
