@@ -18,6 +18,8 @@
     <title>ohmyfood</title>
   </head>
   <body>
+    <div class="loading-spinner"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+    
     <header class="home-header">
       <img
         src="images/ohmyfood.png"
@@ -25,7 +27,7 @@
         class="home-header__logo"
       />
     </header>
-    <main>
+    <main class="home-main">
       <div class="location">
         <i class="fa-solid fa-location-dot location__icon"></i>
         <p class="location__text">Paris, Belleville</p>
@@ -33,25 +35,37 @@
       <div class="information">
         <div class="explore">
           <h1 class="explore__title">Book the menu you like</h1>
-          <p class="explore__text">Discover top-of-the-art restaurants we picked for you</p>
-          <button class=" btn explore__btn">Explore our restaurants</button>
+          <p class="explore__text">
+            Discover top-of-the-art restaurants we picked for you
+          </p>
+          <button class="btn explore__btn">Explore our restaurants</button>
         </div>
         <div class="how">
           <h2 class="how__title">How it works</h2>
           <div class="method">
             <div class="method-card">
-              <div class="method-card__number"><p class="method-card__123">1</p></div>
-              <i class="fa-solid fa-mobile-screen-button fa-fw fa-md method-card__icon"></i>
+              <div class="method-card__number">
+                <p class="method-card__123">1</p>
+              </div>
+              <i
+                class="fa-solid fa-mobile-screen-button fa-fw fa-md method-card__icon"
+              ></i>
               <p class="method-card__text">Choose a restaurant</p>
             </div>
             <div class="method-card">
-              <div class="method-card__number"><p class="method-card__123">2</p></div>
+              <div class="method-card__number">
+                <p class="method-card__123">2</p>
+              </div>
               <i class="fa-solid fa-list-ul fa-fw fa-md method-card__icon"></i>
               <p class="method-card__text">Create your menu</p>
             </div>
             <div class="method-card method-card--color">
-              <div class="method-card__number"><p class="method-card__123">3</p></div>
-              <i class="fa-solid fa-store fa-fw fa-md method-card__icon method-card__icon--color"></i>
+              <div class="method-card__number">
+                <p class="method-card__123">3</p>
+              </div>
+              <i
+                class="fa-solid fa-store fa-fw fa-md method-card__icon method-card__icon--color"
+              ></i>
               <p class="method-card__text">Go enjoy it at the restaurant</p>
             </div>
           </div>
@@ -60,54 +74,72 @@
       <div class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurant-cards">
-      <a href="/thefullpalette.html">
-      <div class="restaurant-card">
-        <div class="restaurant-card__new"><p>New</p></div>
-        <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant-image" class="restaurant-card__image restaurant-card__image--offset">
-        <div class="restaurant-card__textbox">
-          <h3 class="restaurant-card__title">The Full Palette</h3>
-          <p class="restaurant-card__text">New York</p>
-          <i class="fa-regular fa-heart fa-xl restaurant-card__icon"></i>
+          <a href="/thefullpalette.html">
+            <div class="restaurant-card">
+              <div class="restaurant-card__new"><p>New</p></div>
+              <img
+                src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Restaurant-image"
+                class="restaurant-card__image restaurant-card__image--offset"
+              />
+              <div class="restaurant-card__textbox">
+                <h3 class="restaurant-card__title">The Full Palette</h3>
+                <p class="restaurant-card__text">New York</p>
+                <div class="restaurant-card__favourite">
+                <i class="fa-regular fa-heart fa-xl restaurant-card__icon"></i>
+                <i class="fa-solid fa-heart fa-xl restaurant-card__icon2"></i>
+              </div>
+              </div>
+            </div>
+          </a>
+          <a href="/theenchantedplate.html">
+            <div class="restaurant-card">
+              <div class="restaurant-card__new"><p>New</p></div>
+              <img
+                src="images/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="Restaurant-image"
+                class="restaurant-card__image restaurant-card__image--position"
+              />
+              <div class="restaurant-card__textbox">
+                <h3 class="restaurant-card__title">The Enchanted Plate</h3>
+                <p class="restaurant-card__text">New York</p>
+                <i class="fa-regular fa-heart fa-xl restaurant-card__icon1"></i>
+                <i class="fa-solid fa-heart fa-xl restaurant-card__icon2"></i>
+              </div>
+            </div>
+          </a>
+          <a href="/bastille.html">
+            <div class="restaurant-card">
+              <img
+                src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="Restaurant-image"
+                class="restaurant-card__image"
+              />
+              <div class="restaurant-card__textbox">
+                <h3 class="restaurant-card__title">Bastille</h3>
+                <p class="restaurant-card__text">New York</p>
+                <i class="fa-regular fa-heart fa-xl restaurant-card__icon1"></i>
+                <i class="fa-solid fa-heart fa-xl restaurant-card__icon2"></i>
+              </div>
+            </div>
+          </a>
+          <a href="/legourmand.html">
+            <div class="restaurant-card">
+              <img
+                src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Restaurant-image"
+                class="restaurant-card__image"
+              />
+              <div class="restaurant-card__textbox">
+                <h3 class="restaurant-card__title">Le Gourmand</h3>
+                <p class="restaurant-card__text">New York</p>
+                <i class="fa-regular fa-heart fa-xl restaurant-card__icon1"></i>
+                <i class="fa-solid fa-heart fa-xl restaurant-card__icon2"></i>
+              </div>
+            </div>
+          </a>
         </div>
-
       </div>
-    </a>
-      <a href="/theenchantedplate.html">
-      <div class="restaurant-card">
-        <div class="restaurant-card__new"><p>New</p></div>
-        <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant-image" class="restaurant-card__image restaurant-card__image--position">
-        <div class="restaurant-card__textbox">
-          <h3 class="restaurant-card__title">The Enchanted Plate</h3>
-          <p class="restaurant-card__text">New York</p>
-          <i class="fa-regular fa-heart fa-xl restaurant-card__icon"></i>
-        </div>
-
-      </div>
-    </a>
-      <a href="/bastille.html">
-      <div class="restaurant-card">
-        <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant-image" class="restaurant-card__image">
-        <div class="restaurant-card__textbox">
-          <h3 class="restaurant-card__title">Bastille</h3>
-          <p class="restaurant-card__text">New York</p>
-          <i class="fa-regular fa-heart fa-xl restaurant-card__icon"></i>
-        </div>
-
-      </div>
-    </a>
-      <a href="/legourmand.html">
-      <div class="restaurant-card">
-        <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant-image" class="restaurant-card__image">
-        <div class="restaurant-card__textbox">
-          <h3 class="restaurant-card__title">Le Gourmand</h3>
-          <p class="restaurant-card__text">New York</p>
-          <i class="fa-regular fa-heart fa-xl restaurant-card__icon"></i>
-        </div>
-
-      </div>
-    </a>
-  </div>
-  </div>
     </main>
     <footer class="footer">
       <h2 class="footer__logo">ohmyfood</h2>

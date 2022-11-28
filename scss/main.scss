@@ -7,8 +7,11 @@
 
 @import './components/btn';
 @import './components/restaurant-card';
+@import './components/menu-card';
+@import './components/loading-spinner';
 
 @import './layouts/header';
 @import './layouts/footer';
 
 @import './pages/home';
+@import './pages/menu';

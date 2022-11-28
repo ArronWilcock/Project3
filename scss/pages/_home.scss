@@ -1,4 +1,4 @@
-main {
+.home-main {
     @include flexBox(column);
 }
 
@@ -16,6 +16,7 @@ main {
         align-self: center;
         border-radius: 25px;
     }
+
     @include desktop {
         width: 375px;
         align-self: center;

@@ -1,0 +1,59 @@
+.menu-card {
+    height: 65px;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 3px darken($light-accent, 5%);
+
+    &__animation {
+        display: flex;
+        justify-content: space-between;
+        width: 414px;
+        height: 100%;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        padding: 10px 10px 12px;
+
+    }
+
+    &__details{
+        display: flex;
+        justify-content: space-between;
+        width: inherit;
+
+    }
+    &__description {
+        display: flex;
+        color: $dark-accent;
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+    &__price {
+        font-weight: weight(thick);
+        font-size: 15px;
+        color: $dark-accent;
+        margin: 0 15px;
+        
+
+    }
+
+    &__check-box {
+        display: flex;
+        justify-content: center;
+        align-self: stretch;
+        align-items: center;
+        width: 75px;
+        background-color: $tertiary-color;
+        color: #fff;
+    }
+}

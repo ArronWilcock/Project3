@@ -1,0 +1,66 @@
+.menu-main {
+
+    padding: 20px 12px;
+    background-color: $lightest-accent;
+    margin-top: -60px;
+    border-radius:40px 40px 0 0;
+}
+
+.placeholder {
+
+    position: relative;
+    z-index: -1;
+
+    &__image {
+        width: 375px;
+        height: 275px;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    &__name {
+        @include flexBox(row);
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+
+    &__title {
+        font-family: $logo-title-font;
+        font-weight: weight(regular);
+        font-size: 26px;
+    }
+
+    &__cards {
+        @include flexBox(column);
+        gap: 15px;
+    }
+
+    &__course {
+        font-weight: weight(thin);
+        font-size: 16px;
+        color: $dark-accent;
+        margin: 25px 0 5px;
+    }
+
+    &__divider {
+        width: 40px;
+        border: 2px solid $tertiary-color;
+        margin-bottom: 10px;
+
+    }
+
+    &__favourite {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.order {
+    @include flexCentered(row);
+
+    &__btn {
+        width: 180px;
+        margin: 50px 0 85px;
+    }
+}

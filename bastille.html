@@ -19,24 +19,71 @@
   </head>
   <body>
     <header class="menu-header">
-     <a href="/index.html" class="menu-header__btn">
+      <a href="/index.html" class="menu-header__btn">
         <i class="fa-solid fa-arrow-left menu-header__icon--menu"></i>
       </a>
-      
+
       <img
         src="/images/ohmyfood.png"
         alt="oh my food logo"
         class="menu-header__logo"
       />
     </header>
-    <main>
-      <div class="placeholder">
-        <img src="" alt="" class="placeholder__image">
-        <div class="placeholder__text">
-          <h1>Bastille</h1>
-          <i class="fa-regular fa-heart fa-xl"></i>
+    <div class="placeholder">
+      <img
+        src="/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+        alt="restaurant-image"
+        class="placeholder__image"
+      />
+    </div>
+    <main class="menu-main">
+      <div class="menu">
+        <div class="menu__name">
+          <h1 class="menu__title">Bastille</h1>
+          <div class="menu__favourite">
+            <i class="fa-regular fa-heart fa-xl"></i>
+          </div>
         </div>
-        
+        <div class="menu__lists">
+          <div class="menu__entrees">
+            <h2 class="menu__course">ENTREES</h2>
+            <hr class="menu__divider" />
+            <div class="menu__cards">
+              <div class="menu-card">
+                <div class="menu-card__animation">
+                <div class="menu-card__text-box">
+                  <h3 class="menu-card__title">Citrus Squid Carpaccio</h3>
+                  <div class="menu-card__details">
+                    <div class="menu-card__description">With orange zest</div>
+                    <div class="menu-card__price">25&euro;</div>
+                  </div>
+                  
+                </div>
+                <div class="menu-card__check-box">
+                  <i class="fa-sharp fa-solid fa-circle-check fa-lg"></i>
+                </div>
+              </div>
+              </div>
+              
+          </div>
+          <div class="menu__mains">
+            <h2 class="menu__course">MAIN DISH</h2>
+            <hr class="menu__divider" />
+            <div class="menu__cards">
+              
+            </div>
+          </div>
+          <div class="menu__desserts">
+            <h2 class="menu__course">DESSERTS</h2>
+            <hr class="menu__divider" />
+            <div class="menu__cards">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <button class="btn order__btn">Order</button>
       </div>
     </main>
     <footer class="footer">
