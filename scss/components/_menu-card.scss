@@ -1,5 +1,5 @@
 .menu-card {
-    height: 65px;
+    min-height: 65px;
     width: 350px;
     border-radius: 15px;
     overflow: hidden;
@@ -8,9 +8,23 @@
 
     &__animation {
         display: flex;
-        justify-content: space-between;
         width: 414px;
         height: 100%;
+        transition: width 500ms;
+
+        &:hover {
+            width: 350px;
+
+        }
+
+        &:hover .menu-card__check-box > i{
+            animation: check-spin 500ms;
+        }
+    }
+
+    &__title {
+        max-width: 270px;
+        font-size: 18px;
     }
 
     &__text-box {
@@ -20,30 +34,35 @@
         position: relative;
         width: 100%;
         padding: 10px 10px 12px;
+        overflow: hidden;
 
     }
 
-    &__details{
+    &__details {
         display: flex;
         justify-content: space-between;
         width: inherit;
 
     }
+
     &__description {
-        display: flex;
         color: $dark-accent;
         font-size: 15px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        max-width: 250px;
+        width: min-content;
+
 
     }
+
     &__price {
         font-weight: weight(thick);
         font-size: 15px;
         color: $dark-accent;
         margin: 0 15px;
-        
+
 
     }
 
@@ -55,5 +74,12 @@
         width: 75px;
         background-color: $tertiary-color;
         color: #fff;
+        animation: check-spin 500ms forwards;
+    }
+}
+
+@keyframes check-spin {
+    100% {
+        transform: rotate(360deg);
     }
 }

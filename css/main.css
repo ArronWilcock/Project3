@@ -367,6 +367,11 @@ template {
   box-shadow: 0px 4px 3px lightgray;
   font-family: "Roboto", sans-serif;
 }
+.btn:hover {
+  background-image: linear-gradient(to bottom right, #ff83dd, #985ede);
+  box-shadow: 0px 4px 3px #a0a0a0;
+  cursor: pointer;
+}
 
 .restaurant-card {
   position: relative;
@@ -409,15 +414,28 @@ template {
   right: 20px;
   top: 20px;
 }
+.restaurant-card__favourite:hover > .restaurant-card__icon2 {
+  opacity: 1;
+}
 .restaurant-card__icon {
   position: absolute;
   bottom: 12px;
   left: 1px;
 }
 .restaurant-card__icon2 {
+  width: 25px;
+  height: 25px;
   position: absolute;
-  bottom: 12px;
+  bottom: -12px;
   left: 1px;
+  color: #9356DC;
+  opacity: 0;
+}
+.restaurant-card__icon2::before {
+  background-color: red;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .restaurant-card__image {
   height: 170px;
@@ -430,7 +448,7 @@ template {
 }
 
 .menu-card {
-  height: 65px;
+  min-height: 65px;
   width: 350px;
   border-radius: 15px;
   overflow: hidden;
@@ -439,9 +457,19 @@ template {
 }
 .menu-card__animation {
   display: flex;
-  justify-content: space-between;
   width: 414px;
   height: 100%;
+  transition: width 500ms;
+}
+.menu-card__animation:hover {
+  width: 350px;
+}
+.menu-card__animation:hover .menu-card__check-box > i {
+  animation: check-spin 500ms;
+}
+.menu-card__title {
+  max-width: 270px;
+  font-size: 18px;
 }
 .menu-card__text-box {
   display: flex;
@@ -450,6 +478,7 @@ template {
   position: relative;
   width: 100%;
   padding: 10px 10px 12px;
+  overflow: hidden;
 }
 .menu-card__details {
   display: flex;
@@ -457,12 +486,13 @@ template {
   width: inherit;
 }
 .menu-card__description {
-  display: flex;
   color: #343638;
   font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 250px;
+  width: min-content;
 }
 .menu-card__price {
   font-weight: 900;
@@ -478,19 +508,32 @@ template {
   width: 75px;
   background-color: #99E2D0;
   color: #fff;
+  animation: check-spin 500ms forwards;
 }
 
+@keyframes check-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .loading-spinner {
   position: fixed;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  opacity: 1;
   background-color: rgba(231, 229, 229, 0.5);
   z-index: 1;
+  animation: disappear 0ms 3s forwards;
 }
 
+@keyframes disappear {
+  100% {
+    transform: scale(0);
+  }
+}
 .lds-roller {
   width: 75px;
   height: 75px;
@@ -905,9 +948,22 @@ template {
   z-index: -1;
 }
 .placeholder__image {
-  width: 375px;
+  width: 100%;
   height: 275px;
   object-fit: cover;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .placeholder__image {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .placeholder__image {
+    width: 100%;
+    height: 400px;
+    object-position: 100% 70%;
+  }
 }
 
 .menu__name {
@@ -940,6 +996,20 @@ template {
 .menu__favourite {
   display: flex;
   align-items: center;
+}
+.menu__lists {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .menu__lists {
+    flex-flow: row wrap;
+  }
+}
+@media (min-width: 992px) {
+  .menu__lists {
+    flex-flow: row wrap;
+  }
 }
 
 .order {

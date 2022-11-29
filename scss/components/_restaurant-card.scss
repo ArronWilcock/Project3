@@ -40,31 +40,50 @@
         font-size: 17px;
 
     }
+
     &__favourite {
         height: 25px;
         width: 25px;
         position: absolute;
         right: 20px;
         top: 20px;
-       
+
+        &:hover>.restaurant-card__icon2 {
+            opacity: 1;
+        }
+
+
 
     }
+
     &__icon {
         position: absolute;
         bottom: 12px;
         left: 1px;
-        
+
 
     }
 
     &__icon2 {
+        width: 25px;
+        height: 25px;
         position: absolute;
-        bottom: 12px;
+        bottom: -12px;
         left: 1px;
-        
+        color: $primary-color;
+        opacity: 0;
        
+        
+
+        &::before {
+            background-color: red;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
     }
- 
+
 
     &__image {
         height: 170px;
