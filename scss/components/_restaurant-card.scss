@@ -50,6 +50,10 @@
 
         &:hover>.restaurant-card__icon2 {
             opacity: 1;
+            animation: fade-in 1000ms ease;
+        }
+        &:hover>.restaurant-card__icon {
+            opacity: 0;
         }
 
 
@@ -57,8 +61,10 @@
     }
 
     &__icon {
+        width: 25px;
+        height: 25px;
         position: absolute;
-        bottom: 12px;
+        bottom: -12px;
         left: 1px;
 
 
@@ -76,7 +82,7 @@
         
 
         &::before {
-            background-color: red;
+            background-image: linear-gradient(to top right, $secondary-color, $primary-color);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -95,4 +101,12 @@
             object-position: 100% 62%;
         }
     }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0
+}
+100% {
+    opacity: 1;
+}
 }

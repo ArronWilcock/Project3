@@ -416,10 +416,16 @@ template {
 }
 .restaurant-card__favourite:hover > .restaurant-card__icon2 {
   opacity: 1;
+  animation: fade-in 1000ms ease;
+}
+.restaurant-card__favourite:hover > .restaurant-card__icon {
+  opacity: 0;
 }
 .restaurant-card__icon {
+  width: 25px;
+  height: 25px;
   position: absolute;
-  bottom: 12px;
+  bottom: -12px;
   left: 1px;
 }
 .restaurant-card__icon2 {
@@ -432,7 +438,7 @@ template {
   opacity: 0;
 }
 .restaurant-card__icon2::before {
-  background-color: red;
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -447,6 +453,14 @@ template {
   object-position: 100% 62%;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu-card {
   min-height: 65px;
   width: 350px;
@@ -454,18 +468,31 @@ template {
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 3px #dbd8d8;
+  opacity: 0;
+}
+.menu-card--1 {
+  animation: fade-in 2000ms ease forwards;
+}
+.menu-card--2 {
+  animation: fade-in 2000ms ease 250ms forwards;
+}
+.menu-card--3 {
+  animation: fade-in 2000ms ease 500ms forwards;
+}
+.menu-card--4 {
+  animation: fade-in 2000ms ease 750ms forwards;
 }
 .menu-card__animation {
   display: flex;
   width: 414px;
-  height: 100%;
+  min-height: 65px;
   transition: width 500ms;
 }
 .menu-card__animation:hover {
   width: 350px;
 }
-.menu-card__animation:hover .menu-card__check-box > i {
-  animation: check-spin 500ms;
+.menu-card__animation:hover .menu-card__check {
+  animation: check-spin 2000ms;
 }
 .menu-card__title {
   max-width: 270px;
@@ -508,7 +535,9 @@ template {
   width: 75px;
   background-color: #99E2D0;
   color: #fff;
-  animation: check-spin 500ms forwards;
+}
+.menu-card__check {
+  animation: check-spin 2000ms forwards;
 }
 
 @keyframes check-spin {
@@ -526,7 +555,7 @@ template {
   opacity: 1;
   background-color: rgba(231, 229, 229, 0.5);
   z-index: 1;
-  animation: disappear 0ms 3s forwards;
+  animation: disappear 0ms 1500ms forwards;
 }
 
 @keyframes disappear {
@@ -942,6 +971,16 @@ template {
   margin-top: -60px;
   border-radius: 40px 40px 0 0;
 }
+@media (max-width: 992px) and (min-width: 768px) {
+  .menu-main {
+    padding: 20px 50px;
+  }
+}
+@media (min-width: 992px) {
+  .menu-main {
+    padding: 20px 50px;
+  }
+}
 
 .placeholder {
   position: relative;
@@ -976,10 +1015,13 @@ template {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   font-size: 26px;
+  max-width: 250px;
+  line-height: 40px;
 }
 .menu__cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
 }
 .menu__course {
@@ -987,6 +1029,11 @@ template {
   font-size: 16px;
   color: #343638;
   margin: 25px 0 5px;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .menu__mains {
+    order: 1;
+  }
 }
 .menu__divider {
   width: 40px;
@@ -1004,11 +1051,13 @@ template {
 @media (max-width: 992px) and (min-width: 768px) {
   .menu__lists {
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 @media (min-width: 992px) {
   .menu__lists {
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
