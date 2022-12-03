@@ -24,15 +24,16 @@
         display: flex;
         width: 414px;
         min-height: 65px;
-        transition: width 500ms;
+        transition: width 750ms;
 
         &:hover {
             width: 350px;
+            cursor: pointer;
 
         }
 
-        &:hover  .menu-card__check{
-            animation: check-spin 2000ms;
+        &:hover .menu-card__check{
+            animation: check-spin 1000ms forwards;
         }
     }
 
@@ -89,10 +90,6 @@
         background-color: $tertiary-color;
         color: #fff;
         
-    }
-    &__check {
-        animation: check-spin 2000ms forwards;
-
     }
 }
 
