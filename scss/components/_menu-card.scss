@@ -10,12 +10,15 @@
     &--1 {
         animation: fade-in 2000ms ease forwards;
     }
+
     &--2 {
         animation: fade-in 2000ms ease 250ms forwards;
     }
+
     &--3 {
         animation: fade-in 2000ms ease 500ms forwards;
     }
+
     &--4 {
         animation: fade-in 2000ms ease 750ms forwards;
     }
@@ -32,7 +35,7 @@
 
         }
 
-        &:hover .menu-card__check{
+        &:hover .menu-card__check {
             animation: check-spin 1000ms forwards;
         }
     }
@@ -89,7 +92,7 @@
         width: 75px;
         background-color: $tertiary-color;
         color: #fff;
-        
+
     }
 }
 
