@@ -381,6 +381,9 @@ template {
   background-color: #fff;
   border-radius: 15px;
 }
+.restaurant-card:hover {
+  transform: scale(1.02);
+}
 .restaurant-card__new {
   position: absolute;
   top: 12px;
@@ -416,7 +419,7 @@ template {
 }
 .restaurant-card__favourite:hover > .restaurant-card__icon2 {
   opacity: 1;
-  animation: fade-in 1000ms ease;
+  animation: fade-in-heart 1000ms ease;
 }
 .restaurant-card__favourite:hover > .restaurant-card__icon {
   opacity: 0;
@@ -452,12 +455,22 @@ template {
   object-position: 100% 62%;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-heart {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .menu-card {
@@ -485,7 +498,7 @@ template {
   display: flex;
   width: 414px;
   min-height: 65px;
-  transition: width 750ms;
+  transition: width 1000ms;
 }
 .menu-card__animation:hover {
   width: 350px;
@@ -1064,7 +1077,7 @@ template {
 }
 .menu__favourite:hover > .menu__icon2 {
   opacity: 1;
-  animation: fade-in 1000ms ease;
+  animation: fade-in-heart 1000ms ease;
 }
 .menu__favourite:hover > .menu__icon {
   opacity: 0;
