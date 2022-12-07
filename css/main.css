@@ -380,9 +380,13 @@ template {
   overflow: hidden;
   background-color: #fff;
   border-radius: 15px;
+  transform: scale(1);
+  transition: transform 250ms ease-in, box-shadow 250ms ease-in;
+  box-shadow: 0px 2px 5px 1px #dbd8d8;
 }
 .restaurant-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0px 2px 5px 1px #9e9595;
 }
 .restaurant-card__new {
   position: absolute;
