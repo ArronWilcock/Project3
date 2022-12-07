@@ -775,6 +775,7 @@ template {
 }
 .footer__list-item a {
   color: #fff;
+  transition: color 250ms ease-in;
 }
 .footer__list-item a:hover {
   color: #FF79DA;
